@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streams of Joy South London</title>
+<link rel="icon" href="assets/
+icons/favicon.ico">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header id="siteHeader" class="site-header solid show">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/
+images/logo.png" alt="Streams of Joy South London" class="nav-logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
+      <li><a class="nav-link" href="coming-soon.html">Media</a></li>
+      <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
+      <li><a class="nav-link" href="coming-soon.html">Give</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main class="container" style="padding-top: 140px;">
+  <section class="who">
+    <div class="who-wrap">
+      <p class="section-kicker">PLAN YOUR VISIT</p>
+
+      <div class="who-card">
+        <h2>Your First Visit</h2>
+        <p>
+          We’re launching soon and would love to welcome you in person.
+          Here’s everything you need service info, directions, and what to expect.
+        </p>
+
+        <div style="margin-top: 16px;">
+          <p><strong>First Service:</strong> Sunday, 22 March 2026</p>
+          <p><strong>Time:</strong> TBC</p>
+          <p><strong>Venue:</strong> <span id="venueText">Venue TBC</span></p>
+        </div>
+
+        <div class="who-actions">
+          <a class="btn btn-primary" id="directionsBtn" href="#" target="_blank" rel="noreferrer">Get Directions</a>
+          <a class="btn btn-outline" href="#register">Register interest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sermon-feature" style="padding: 70px 20px;">
+    <div class="sermon-wrap" style="grid-template-columns: 1fr;">
+      <div class="sermon-left">
+        <p class="sermon-kicker">WHAT TO EXPECT</p>
+        <h2 class="sermon-title">A warm welcome</h2>
+        <p style="max-width: 70ch;">
+          Friendly people, uplifting worship, practical teaching, and time for prayer.
+          Come as you are you’re welcome.
+        </p>
+
+        <ul style="margin-top: 16px; line-height: 1.9;">
+          <li>Arrive 10–15 minutes early for seating</li>
+          <li>Smart-casual or comfortable clothing</li>
+          <li>Families welcome</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="findus" style="border-radius: 18px; overflow: hidden;">
+    <div class="findus-panel">
+      <div class="findus-content">
+        <p class="findus-kicker" style="opacity: 0.85; transform:none;">LOCATION</p>
+        <h2 class="findus-title" style="transform:none;">
+          <span class="line1">GETTING TO</span>
+          <span class="line2">Streams of Joy</span>
+          <span class="line3">South London</span>
+        </h2>
+
+        <div class="findus-reveal" style="opacity:1; transform:none; pointer-events:auto;">
+          <p class="findus-sub" id="venueDetails">
+            Venue details will appear here once set.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="findus-map" style="max-height: 520px; opacity:1; transform:none;">
+      <iframe
+        id="mapFrame"
+        title="Streams of Joy South London Location"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=London&output=embed">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="register" class="who" style="padding-top: 70px;">
+    <div class="who-wrap">
+      <p class="section-kicker">STAY UPDATED</p>
+      <div class="who-card">
+        <h2>Register your interest</h2>
+        <p>Leave your email and we’ll send launch updates and service details.</p>
+
+        <form class="footer-form" action="#" method="post" style="max-width: 520px; margin: 0 auto;">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">Join</button>
+        </form>
+
+        <p class="footer-legal-mini" style="margin-top: 10px;">
+          No spam — just key updates. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Theme (reuse your existing logic)
+  const themeBtn = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") document.body.classList.add("dark");
+
+  function updateIcon() {
+    themeBtn.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+  }
+  updateIcon();
+
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    updateIcon();
+  });
+
+  // TODO: paste your venue here once you send it
+  const venueAddress = ""; // e.g. "123 High Street, Croydon, London SE25 5XX"
+
+  const venueText = document.getElementById("venueText");
+  const venueDetails = document.getElementById("venueDetails");
+  const directionsBtn = document.getElementById("directionsBtn");
+  const mapFrame = document.getElementById("mapFrame");
+
+  if (venueAddress.trim()){
+    venueText.textContent = venueAddress;
+    venueDetails.textContent = venueAddress;
+
+    const q = encodeURIComponent(venueAddress);
+    directionsBtn.href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+    mapFrame.src = `https://www.google.com/maps?q=${q}&output=embed`;
+  } else {
+    directionsBtn.href = "https://www.google.com/maps?q=London&output=embed";
+  }
+</script>
+
+</body>
+</html>

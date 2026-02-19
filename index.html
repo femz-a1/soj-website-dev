@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Streams of Joy South London</title>
+
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header id="siteHeader" class="site-header show">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+  <img src="assets/images/logo.png" alt="Streams of Joy South London" class="nav-logo">
+</a>
+
+<button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Media</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Give</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+    <section class="home-hero" id="home">
+    <div class="hero-card">
+      <img class="hero-bg" src="assets/images/hero.jpg" alt="Streams of Joy South London">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title">
+           <span class="hero-typing" id="heroTyping" aria-label="Theme message"></span>
+           
+           
+           
+            <span class="hero-line small">WELCOME TO</span>
+            <span class="hero-line main">STREAMS OF JOY</span>
+            <span class="hero-line accent">SOUTH LONDON</span>
+          </h1>
+
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="visit.html">Plan Your Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="container">
+
+<section class="who" id="who">
+  <div class="who-wrap">
+    <p class="section-kicker">WHO WE ARE</p>
+
+    <div class="who-card">
+      <h2>Streams of Joy South London</h2>
+      <p>
+        Streams of Joy South London is the latest London expression of Streams of Joy International
+        a growing global church community committed to raising lives and building faith.
+      </p>
+      
+      <div class="who-actions">
+        <a class="btn btn-primary" href="about.html">Learn more</a>
+         <button class="btn btn-outline" data-open-join="volunteer">
+              Join the Launch List / Volunteer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <section class="countdown reveal" id="countdown">
+  <div class="countdown-wrap">
+    <p class="countdown-kicker">LAUNCH COUNTDOWN</p>
+    <h2 class="countdown-title">First Service</h2>
+    <p class="countdown-sub">
+      We can’t wait to welcome you. Join us on <strong>Sunday, 22 March 2026</strong>.
+    </p>
+
+    <div class="countdown-grid" aria-label="Countdown timer">
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdDays">--</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdHours">--</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdMins">--</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdSecs">--</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+
+    <div class="countdown-actions">
+      <a class="btn btn-primary" href="get-involved.html">Plan your visit</a>
+      <a class="btn btn-outline" href="#findus">Get directions</a>
+    </div>
+
+    <p class="countdown-note" id="countdownNote"></p>
+  </div>
+</section>
+
+
+
+
+    <section class="home-pastor reveal" aria-label="Lead Pastor">
+    <div class="pastor-bg" id="pastorBanner">
+
+      <!-- Background image layer (we move this for parallax) -->
+      <div class="pastor-bg-image" aria-hidden="true"></div>
+
+      <!-- Overlay layer (controls readability using CSS variables) -->
+      <div class="pastor-bg-overlay" aria-hidden="true"></div>
+
+      <!-- Foreground content -->
+      <div class="pastor-content">
+
+        <div class="pastor-text">
+          <!-- Curved panel behind text -->
+          <div class="pastor-text-box">
+            <p>
+              Our global lead pastor is <strong>Pastor Jerry Eze</strong>, a powerful teacher of God’s Word
+              and a voice of faith to many across the world. Through clear teaching, worship,
+              and prayer, countless people have been encouraged and strengthened.
+            </p>
+          </div>
+        </div>
+
+        <div class="pastor-image">
+          <img src="assets/images/Jerry_Eze.jpg" alt="Pastor Jerry Eze">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="home-expect reveal">
+  <div class="expect-card">
+    <h2>What to expect</h2>
+
+    <ul class="expect-list">
+      <li><strong>A warm welcome:</strong> Friendly people and a relaxed, supportive atmosphere.</li>
+      <li><strong>Worship & teaching:</strong> Uplifting worship and practical messages you can apply.</li>
+      <li><strong>Prayer:</strong> A moment to connect with God and build your faith.</li>
+      <li><strong>Come as you are:</strong> Wear what you’re comfortable in — you’re welcome.</li>
+    </ul>
+  </div>
+</section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
+  <img class="lightbox-img" id="lightboxImg" alt="Expanded image">
+</div>
+
+<section class="local-pastor" id="pastor-phreddy">
+  <div class="local-pastor-wrap">
+
+    <div class="lp-left">
+      <p class="lp-kicker">MEET OUR RESIDENT PASTOR</p>
+      <h2 class="lp-title">PASTOR PHREDDY</h2>
+
+      <p class="lp-sub">
+        A pastor with a heart for people, worship, and the Word committed to building faith and raising lives.
+      </p>
+      
+      <blockquote class="lp-quote">
+        “Our heart is to raise lives and build faith in South London.”
+      </blockquote>
+
+
+      <div class="lp-actions">
+        <a class="btn btn-secondary" href="about.html">Read full bio</a>
+        <!-- If you want modal to open, add this button (see section 3) -->
+      </div>
+
+      <div class="lp-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div> <!-- ✅ CLOSE lp-left properly -->
+
+    <div class="lp-right">
+      <figure class="lp-photo" data-spotlight>
+        <img src="assets/images/phreddy-1.jpg" alt="Pastor Phreddy preaching">
+        <span class="lp-photo-glow" aria-hidden="true"></span>
+      </figure>
+
+      <figure class="lp-photo is-secondary" data-spotlight>
+        <img src="assets/images/phreddy-2.jpg" alt="Pastor Phreddy speaking">
+        <span class="lp-photo-glow" aria-hidden="true"></span>
+      </figure>
+    </div>
+
+
+  </div>
+</section>
+
+
+    
+
+
+
+    <section class="sermon-feature" id="sermon">
+  <div class="sermon-wrap">
+
+    <div class="sermon-left">
+      <p class="sermon-kicker">LATEST SERMON</p>
+
+      <div class="sermon-meta">
+        <p><span>Title:</span> ALL ROUND RESTORATION</p>
+        <p><span>Date:</span> 18 January 2026</p>
+      </div>
+
+      <div class="sermon-actions">
+        
+        <a class="btn btn-gold"
+           href="https://www.youtube.com/watch?v=m2F_XlZmQxM&t=10372s"
+           target="_blank" rel="noopener">
+          Watch from preaching
+        </a>
+
+        <a class="btn btn-outline" href="https://www.youtube.com/watch?v=m2F_XlZmQxM&t=7249s">
+          Watch Full Service
+        </a>
+      </div>
+
+      <p class="sermon-note">
+        Want to attend in person? Scroll down to <a href="#findus">Find us</a>.
+      </p>
+    </div>
+
+    <a class="sermon-video"
+       href="https://www.youtube.com/watch?v=m2F_XlZmQxM&t=10372s"
+       target="_blank" rel="noopener"
+       aria-label="Play sermon from preaching">
+      <img src="assets/images/latest-sermon.jpg" alt="Latest sermon thumbnail">
+      <span class="play-btn" aria-hidden="true"></span>
+      <span class="sermon-badge">Starts at preaching</span>
+    </a>
+
+  </div>
+</section>
+
+     
+     <section class="ministries" id="ministries">
+  <div class="ministries-wrap">
+    <header class="ministries-head">
+      <p class="ministries-kicker">COMMUNITIES</p>
+      <h2>Ministries</h2>
+      <p class="ministries-sub">
+        Here are some of the communities you’ll find at Streams of Joy South London.
+      </p>
+    </header>
+
+    <div class="ministries-grid">
+      <a class="min-tile" href="#">
+        <img src="assets/images/min-arrows.jpg" alt="Mighty Arrows">
+        <span class="min-overlay"></span>
+        <span class="min-text">
+          <span class="min-title">Mighty Arrows</span>
+          <span class="min-meta">Children (2–12)</span>
+        </span>
+      </a>
+
+      <a class="min-tile" href="#">
+        <img src="assets/images/min-trailblazers.jpg" alt="Trailblazers">
+        <span class="min-overlay"></span>
+        <span class="min-text">
+          <span class="min-title">Trailblazers</span>
+          <span class="min-meta">Teens (13–18)</span>
+        </span>
+      </a>
+
+      <a class="min-tile" href="#">
+        <img src="assets/images/min-youth.jpg" alt="Youth">
+        <span class="min-overlay"></span>
+        <span class="min-text">
+          <span class="min-title">Youth</span>
+          <span class="min-meta">Young adults</span>
+        </span>
+      </a>
+
+      <a class="min-tile" href="#">
+        <img src="assets/images/min-men.jpg" alt="Joshua Generation">
+        <span class="min-overlay"></span>
+        <span class="min-text">
+          <span class="min-title">Joshua Generation</span>
+          <span class="min-meta">Men</span>
+        </span>
+      </a>
+
+      <a class="min-tile" href="#">
+        <img src="assets/images/min-women.jpg" alt="Pillars of Grace">
+        <span class="min-overlay"></span>
+        <span class="min-text">
+          <span class="min-title">Pillars of Grace</span>
+          <span class="min-meta">Women</span>
+        </span>
+      </a>
+      </div>
+      </section>
+<section class="findus" id="findus">
+
+  <!-- Top panel (full width, not full height) -->
+  <div class="findus-panel">
+
+    <!-- Doors -->
+    <span class="findus-door left" aria-hidden="true"></span>
+    <span class="findus-door right" aria-hidden="true"></span>
+
+    <!-- Big stencil bottom-right -->
+    <div class="findus-stencil" aria-hidden="true">FIND US</div>
+
+    <!-- Content -->
+    <div class="findus-content">
+      <p class="findus-kicker">FIND US</p>
+      
+      <h2 class="findus-title">
+  <span class="line1">YOU ARE WELCOME TO</span>
+  <span class="line2">Streams of Joy</span>
+  <span class="line3">South London</span>
+</h2>
+
+      <div class="findus-reveal">
+        <p class="findus-sub">
+          Where your transformation is assured. Your life will never remain the same.
+        </p>
+
+        <div class="findus-actions">
+          <a class="btn btn-primary" target="_blank" rel="noreferrer"
+             href="https://www.google.com/maps/search/?api=1&query=Streams%20of%20Joy%20South%20London">
+            Get Directions
+          </a>
+          <a class="btn btn-outline" href="get-involved.html">Plan Your Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full width map (reveals on hover) -->
+  <div class="findus-map">
+    <iframe
+      title="Streams of Joy South London Location"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=London&output=embed">
+    </iframe>
+  </div>
+
+</section>
+
+<div id="joinModal" class="modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close="true"></div>
+
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="joinTitle">
+    <button class="modal__close" type="button" data-close="true" aria-label="Close">×</button>
+
+<h2 id="joinTitle" class="modal-title">Devotional by Pastor Jerry Eze</h2>
+
+<div class="devo-card" role="region" aria-label="Today’s devotional">
+  <p class="devo-date" id="devoDate"></p>
+
+  <p class="devo-scripture">
+    “Start your day with faith, prayer, and prophetic direction.”
+  </p>
+
+  <h3 class="devo-topic">Stay Charged. Stay Expectant.</h3>
+
+  <p class="devo-preview">
+    Read today’s devotional on Pastor Jerry’s official page then join the launch/ Volunteers list to stay connected with Streams of Joy South London.
+  </p>
+
+  <a class="devo-btn"
+     href="https://jerryeze.com/devotional/"
+     target="_blank" rel="noopener">
+    Read Today’s Devotional →
+  </a>
+
+  <p class="devo-declare">What God Cannot Do Does Not Exist.</p>
+</div>
+
+<div class="modal-sub">
+  Join the launch list for service updates, WhatsApp channel, and volunteering opportunities.
+</div>
+
+
+
+    <form id="quickJoinForm" class="modal__form">
+      <label>
+        Full name *
+        <input name="full_name" required placeholder="Your full name">
+      </label>
+
+      <label>
+        Email *
+        <input name="email" type="email" required placeholder="you@example.com">
+      </label>
+
+      <label>
+        Phone (optional)
+        <input name="phone" placeholder="+44 ...">
+      </label>
+
+      <div class="checks">
+        <label><input type="checkbox" name="wants_launch_updates" checked> Launch updates</label>
+        <label><input type="checkbox" name="wants_sunday_reminders"> Sunday reminders</label>
+        <label><input type="checkbox" name="wants_event_notifications"> Special events</label>
+        <label><input type="checkbox" name="wants_whatsapp"> Join WhatsApp channel</label>
+        <label><input type="checkbox" name="wants_to_volunteer"> I want to volunteer / serve</label>
+        <label><input type="checkbox" name="is_newcomer"> I’m new someone can contact me</label>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" name="consent" required>
+        I agree to be contacted by Streams of Joy South London about updates and next steps.
+      </label>
+      
+
+      <button class="btn-submit" type="submit">Join Now</button>
+      <p id="joinMsg" class="msg" aria-live="polite"></p>
+      <div class="modal-actions">
+        <button type="button" class="modal-link" id="modalNotNow">
+          Not now
+        </button>
+        <button type="button" class="modal-link danger" id="modalNever">
+          Don’t show again
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-wrap">
+
+    <!-- Brand / About -->
+    <div class="footer-col footer-brand">
+
+      <div class="footer-logo">
+        <img src="assets/images/logo.png" alt="Streams of Joy South London Logo" class="footer-logo-img">
+      </div>
+
+      <p class="footer-desc">
+        The latest London expression of Streams of Joy International committed to raising lives
+        and building faith.
+      </p>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#sermon">Latest sermon</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#findus">Find us</a></li>
+      </ul>
+    </div>
+
+    <!-- Service Info -->
+    <div class="footer-col">
+      <h4>Service Info</h4>
+      <ul>
+        <li><span class="muted">Service:</span> Sunday (Time TBC)</li>
+        <li><span class="muted">Location:</span> South London (Venue TBC)</li>
+        <li><span class="muted">Email:</span> <a href="mailto:info@sojsouthlondon.org">info@sojsouthlondon.org</a></li>
+      </ul>
+
+      <a class="footer-cta" href="#findus">Plan your visit</a>
+    </div>
+
+    <!-- Newsletter / Updates -->
+    <div class="footer-col">
+      <h4>Stay Updated</h4>
+      <p class="footer-mini">
+        Get launch updates, service info, and announcements.
+      </p>
+
+      <form class="footer-form" id="footerLeadForm">
+  <input type="email" id="footerEmail" name="email" placeholder="Your email" required>
+  <button type="submit">Join</button>
+</form>
+
+
+      <p class="footer-legal-mini">
+        By joining you agree to receive updates. Unsubscribe anytime.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Streams of Joy South London. All rights reserved.</p>
+    <p class="footer-bottom-right">
+      <a href="#">Privacy</a>
+      <span class="dot">•</span>
+      <a href="#">Terms</a>
+    </p>
+  </div>
+</footer>
+<script src="JS/main.js"></script>
+
+</body>
+</html>
