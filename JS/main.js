@@ -291,6 +291,7 @@ if (header && burger){
     setInterval(tick, 1000);
   })();
 
+
   // =========================================================
   // JOIN MODAL + FORM SUBMIT
   // =========================================================
@@ -451,6 +452,23 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("footer-placeholder");
+  console.log("footer placeholder found?", !!el);
+  
+  if (!el) return;
+  fetch("footer.html")
+  .then(r => {
+    console.log("footer fetch status:", r.status);
+    return r.text();
+  })
+  .then(html => {
+    el.innerHTML = html;
+    console.log("footer injected ✅");
+  })
+  .catch(err => console.error("Footer failed to load:", err));
 });
 
 

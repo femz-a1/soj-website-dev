@@ -1908,7 +1908,7 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .site-footer{
   background: #0b0b0c;
   color: #ffffff;
-  padding: 90px 20px 24px;
+  padding: 0 20px 24px; /* ✅ remove top padding */
   border-top: 1px solid rgba(255,255,255,0.08);
   max-width: none;
 }
@@ -1919,6 +1919,7 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   display: grid;
   grid-template-columns: 1.3fr 1fr 1.1fr 1.2fr;
   gap: 38px;
+  padding-top: 56px;
 }
 
 .footer-col h4{
@@ -2110,11 +2111,8 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .follow-bar{
   border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  background: linear-gradient(
-    90deg,
-    rgba(201,162,77,0.18),
-    rgba(201,162,77,0.08)
-  );
+  background: var(--gold);
+  color: #0b0b0c;
 }
 
 .follow-bar-inner{
@@ -2131,7 +2129,7 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   margin: 0;
   opacity: 0.95;
   font-weight: 700;
-  letter-spacing: 0.4;
+  letter-spacing: 0.4px;
 }
 
 .follow-bar-actions{
