@@ -2108,15 +2108,19 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 
 /* ===== FOLLOW BAR (Footer social callout) ===== */
 .follow-bar{
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  background: rgba(201, 162, 77, 0.10); /* soft gold tint */
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(
+    90deg,
+    rgba(201,162,77,0.18),
+    rgba(201,162,77,0.08)
+  );
 }
 
 .follow-bar-inner{
   max-width: 1200px; /* match your site width if you have one */
   margin: 0 auto;
-  padding: 14px 18px;
+  padding: 22px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2126,7 +2130,8 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .follow-bar-text{
   margin: 0;
   opacity: 0.95;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.4;
 }
 
 .follow-bar-actions{
