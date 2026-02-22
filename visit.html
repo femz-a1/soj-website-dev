@@ -8,6 +8,142 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Premium page-only polish (safe + minimal) -->
+  <style>
+    .pv-hero { padding: 84px 20px 28px; }
+
+    .pv-grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items:start;
+    }
+    @media (max-width: 900px){
+      .pv-grid{ grid-template-columns: 1fr; }
+    }
+
+    .pv-card{
+      border-radius:18px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+      padding:22px;
+      box-shadow:0 12px 30px rgba(0,0,0,.07);
+    }
+
+    .pv-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:.08em;
+      font-size:.78rem;
+      opacity:.9;
+    }
+
+    .pv-title{
+      margin:10px 0 10px;
+      font-size:clamp(1.6rem, 2.4vw, 2.1rem);
+      line-height:1.15;
+    }
+
+    .pv-muted{
+      opacity:.85;
+      max-width:70ch;
+      line-height:1.7;
+    }
+
+    .pv-meta{ display:grid; gap:10px; margin-top:16px; }
+    .pv-meta-row{ display:flex; gap:10px; align-items:flex-start; }
+    .pv-meta-row i{ width:20px; margin-top:3px; opacity:.9; }
+    .pv-meta-row strong{ display:block; }
+
+    .pv-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+
+    .pv-divider{ height:1px; background:rgba(0,0,0,.10); margin:18px 0; }
+
+    .pv-mini-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+
+    .pv-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border-radius:999px;
+      padding:10px 12px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#f8f8f8;
+      text-decoration:none;
+      color:inherit;
+      font-weight:600;
+    }
+
+    .pv-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+
+    .pv-tab{
+      border:1px solid rgba(0,0,0,.10);
+      background:transparent;
+      padding:10px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .pv-tab.active{ background:rgba(0,0,0,.06); }
+
+    .pv-panel{ display:none; margin-top:14px; }
+    .pv-panel.show{ display:block; }
+
+    .pv-list{ margin:0; padding-left:18px; line-height:1.9; }
+
+    .pv-note{
+      margin-top:10px;
+      font-size:.95rem;
+      opacity:.85;
+      line-height:1.7;
+      border-left:3px solid rgba(0,0,0,.12);
+      padding-left:12px;
+    }
+
+    .pv-map-wrap{
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .pv-copy{
+      border:1px solid rgba(0,0,0,.10);
+      background:transparent;
+      padding:10px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .pv-toast{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:22px;
+      z-index:9999;
+      padding:12px 14px;
+      border-radius:999px;
+      background:rgba(0,0,0,.85);
+      color:#fff;
+      display:none;
+      align-items:center;
+      gap:10px;
+      box-shadow:0 12px 30px rgba(0,0,0,.25);
+      font-weight:700;
+    }
+    .pv-toast.show{ display:flex; }
+  </style>
 </head>
 
 <body>
@@ -20,61 +156,135 @@
 
     <ul class="nav-links">
       <li><a class="nav-link" href="index.html">Home</a></li>
-      <li><a class="nav-link" href="coming-soon.html">About</a>
+      <li><a class="nav-link" href="coming-soon.html">About</a></li>
       <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
       <li><a class="nav-link" href="coming-soon.html">Media</a></li>
       <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
       <li><a class="nav-link" href="coming-soon.html">Give</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+      <li><a class="nav-link" href="prayer-line.html">Prayer Line</a></li>
     </ul>
-
   </nav>
 </header>
 
 <main class="container" style="padding-top: 140px;">
-  <section class="who">
-    <div class="who-wrap">
-      <p class="section-kicker">PLAN YOUR VISIT</p>
 
-      <div class="who-card">
-        <h2>Your First Visit</h2>
-        <p>
+  <!-- PREMIUM HERO -->
+  <section class="pv-hero">
+    <div class="pv-grid">
+
+      <!-- LEFT: VISIT INFO -->
+      <div class="pv-card">
+        <div class="pv-badge">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>PLAN YOUR VISIT</span>
+        </div>
+
+        <h1 class="pv-title">Your First Visit</h1>
+        <p class="pv-muted">
           We’re launching soon and would love to welcome you in person.
-          Here’s everything you need service info, directions, and what to expect.
+          Here’s everything you need — service info, directions, and what to expect.
         </p>
 
-        <div style="margin-top: 16px;">
-          <p><strong>First Service:</strong> Sunday, 22 March 2026</p>
-          <p><strong>Time:</strong> TBC</p>
-          <p><strong>Venue:</strong> <span id="venueText">Venue TBC</span></p>
+        <div class="pv-meta">
+          <div class="pv-meta-row">
+            <i class="fa-regular fa-calendar"></i>
+            <div>
+              <strong>First Service</strong>
+              <span>Sunday, 22 March 2026</span>
+            </div>
+          </div>
+
+          <div class="pv-meta-row">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <strong>Time</strong>
+              <span>TBC</span>
+            </div>
+          </div>
+
+          <div class="pv-meta-row">
+            <i class="fa-solid fa-map-pin"></i>
+            <div>
+              <strong>Venue</strong>
+              <span id="venueText">114 Rushey Green, London SE6 4HW</span>
+            </div>
+          </div>
         </div>
 
-        <div class="who-actions">
-          <a class="btn btn-primary" id="directionsBtn" href="#" target="_blank" rel="noreferrer">Get Directions</a>
-          <a class="btn btn-outline" href="#register">Register interest</a>
+        <div class="pv-actions">
+          <a class="btn btn-primary" id="directionsBtn" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+          </a>
+          <a class="btn btn-outline" href="#register">
+            <i class="fa-solid fa-bell"></i> Register interest
+          </a>
+          <button class="pv-copy" id="copyAddressBtn" type="button">
+            <i class="fa-regular fa-copy"></i> Copy Address
+          </button>
         </div>
+
+        <div class="pv-divider"></div>
+
+        <!-- QUICK ROUTES TEXT (you asked for this back) -->
+        <p class="pv-muted" style="margin:0;">
+          Want the quickest route? Choose a starting point below it’ll open Google Maps instantly.
+        </p>
+
+        <div class="pv-mini-actions">
+          <a class="pv-pill" id="fromCatfordWalk" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-person-walking"></i> From Catford Station
+          </a>
+          <a class="pv-pill" id="fromCatfordBridgeWalk" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-person-walking"></i> From Catford Bridge
+          </a>
+          <a class="pv-pill" id="fromLewisham" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-train-subway"></i> From Lewisham
+          </a>
+        </div>
+
+        <!-- COME EARLY NOTE -->
+        <p class="pv-note">
+          Tip: arrive 10–15 minutes early for seating and a smooth welcome.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <section class="sermon-feature" style="padding: 70px 20px;">
-    <div class="sermon-wrap" style="grid-template-columns: 1fr;">
-      <div class="sermon-left">
-        <p class="sermon-kicker">WHAT TO EXPECT</p>
-        <h2 class="sermon-title">A warm welcome</h2>
-        <p style="max-width: 70ch;">
+      <!-- RIGHT: WHAT TO EXPECT (you asked for this back) -->
+      <div class="pv-card">
+        <div class="pv-badge">
+          <i class="fa-regular fa-heart"></i>
+          <span>WHAT TO EXPECT</span>
+        </div>
+
+        <h2 class="pv-title" style="font-size: clamp(1.3rem, 2vw, 1.6rem);">A warm welcome</h2>
+        <p class="pv-muted">
           Friendly people, uplifting worship, practical teaching, and time for prayer.
           Come as you are you’re welcome.
         </p>
 
-        <ul style="margin-top: 16px; line-height: 1.9;">
-          <li>Arrive 10–15 minutes early for seating</li>
+        <ul class="pv-list">
+          <li>Friendly welcome team at the entrance</li>
+          <li>Uplifting worship + practical teaching</li>
           <li>Smart-casual or comfortable clothing</li>
           <li>Families welcome</li>
+          <li>Prayer available during/after service</li>
         </ul>
+
+        <div class="pv-divider"></div>
+
+        <div class="pv-badge">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>ON ARRIVAL</span>
+        </div>
+        <p class="pv-muted" style="margin-top:10px;">
+          If you need help (seating, access, directions), our team will be happy to assist.
+        </p>
       </div>
+
     </div>
   </section>
 
+  <!-- PREMIUM LOCATION + MAP (you asked for this back) -->
   <section class="findus" style="border-radius: 18px; overflow: hidden;">
     <div class="findus-panel">
       <div class="findus-content">
@@ -87,24 +297,70 @@
 
         <div class="findus-reveal" style="opacity:1; transform:none; pointer-events:auto;">
           <p class="findus-sub" id="venueDetails">
-            Venue details will appear here once set.
+            114 Rushey Green, London SE6 4HW
           </p>
+
+          <!-- Tabs -->
+          <div class="pv-tabs" role="tablist" aria-label="Travel options">
+            <button class="pv-tab active" type="button" data-tab="walk" role="tab" aria-selected="true">
+              <i class="fa-solid fa-person-walking"></i> Walk
+            </button>
+            <button class="pv-tab" type="button" data-tab="train" role="tab" aria-selected="false">
+              <i class="fa-solid fa-train"></i> Train
+            </button>
+            <button class="pv-tab" type="button" data-tab="bus" role="tab" aria-selected="false">
+              <i class="fa-solid fa-bus"></i> Bus
+            </button>
+          </div>
+
+          <!-- Panels -->
+          <div class="pv-panel show" id="panel-walk" role="tabpanel">
+            <ul class="pv-list">
+              <li><strong>Catford Station →</strong> around a 5–7 minute walk along Rushey Green.</li>
+              <li><strong>Catford Bridge Station →</strong> around an 8–10 minute walk via Rushey Green.</li>
+            </ul>
+            <p class="pv-note" style="margin-bottom:0;">
+              Use the “From Catford Station” or “From Catford Bridge” buttons above for turn-by-turn walking directions.
+            </p>
+          </div>
+
+          <div class="pv-panel" id="panel-train" role="tabpanel">
+            <ul class="pv-list">
+              <li><strong>From Lewisham →</strong> take a train to Catford Bridge, then walk to Rushey Green.</li>
+              <li><strong>From Central London →</strong> travel to Lewisham, then follow the route above.</li>
+            </ul>
+            <p class="pv-note" style="margin-bottom:0;">
+              Google Maps will choose the fastest connection based on live services.
+            </p>
+          </div>
+
+          <div class="pv-panel" id="panel-bus" role="tabpanel">
+            <ul class="pv-list">
+              <li><strong>High frequency routes:</strong> 47, 75, 284 (stops close to Rushey Green).</li>
+              <li>Other routes commonly used around Catford: 202, 185, 199, 136.</li>
+            </ul>
+            <p class="pv-note" style="margin-bottom:0;">
+              Bus times vary — Google Maps will pick the best option based on live traffic.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <div class="findus-map" style="max-height: 520px; opacity:1; transform:none;">
+    <div class="findus-map pv-map-wrap" style="max-height: 520px; opacity:1; transform:none;">
       <iframe
-            id="mapFrame"
-            title="Streams of Joy South London Locationloading="
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=51.4467903,-0.0197191&output=embed"
-            style="width:100%; height:520px; border:0;">
-          </iframe>
+        id="mapFrame"
+        title="Streams of Joy South London Location"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=114+Rushey+Green,+London+SE6+4HW&output=embed"
+        style="width:100%; height:520px; border:0;">
+      </iframe>
     </div>
   </section>
 
+  <!-- REGISTER -->
   <section id="register" class="who" style="padding-top: 70px;">
     <div class="who-wrap">
       <p class="section-kicker">STAY UPDATED</p>
@@ -123,42 +379,107 @@
       </div>
     </div>
   </section>
+
 </main>
 
+<!-- Toast -->
+<div class="pv-toast" id="pvToast" role="status" aria-live="polite">
+  <i class="fa-solid fa-check"></i>
+  <span id="pvToastText">Copied</span>
+</div>
+
 <script>
-  // Theme (reuse your existing logic)
-  const themeBtn = document.getElementById("themeToggle");
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") document.body.classList.add("dark");
-
-  function updateIcon() {
-    themeBtn.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
-  }
-  updateIcon();
-
-  themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-    updateIcon();
-  });
-
-  // TODO: paste your venue here once you send it
-  const venueAddress = "108-110 Rushey Green, Catford, SE6 4HW"; // e.g. "123 High Street, Croydon, London SE25 5XX"
+  // ===============================
+  // Venue + map
+  // ===============================
+  const venueAddress = "114 Rushey Green, London SE6 4HW";
 
   const venueText = document.getElementById("venueText");
   const venueDetails = document.getElementById("venueDetails");
   const directionsBtn = document.getElementById("directionsBtn");
   const mapFrame = document.getElementById("mapFrame");
 
-  if (venueAddress.trim()){
-    venueText.textContent = venueAddress;
-    venueDetails.textContent = venueAddress;
+  const fromCatfordWalk = document.getElementById("fromCatfordWalk");
+  const fromCatfordBridgeWalk = document.getElementById("fromCatfordBridgeWalk");
+  const fromLewisham = document.getElementById("fromLewisham");
 
-    const q = encodeURIComponent(venueAddress);
-    directionsBtn.href = `https://www.google.com/maps/search/?api=1&query=${q}`;
-    mapFrame.src = `https://www.google.com/maps?q=${q}&output=embed`;
-  } else {
-    directionsBtn.href = "https://www.google.com/maps?q=London&output=embed";
+  if (venueText) venueText.textContent = venueAddress;
+  if (venueDetails) venueDetails.textContent = venueAddress;
+
+  const q = encodeURIComponent(venueAddress);
+
+  if (directionsBtn) directionsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+  if (mapFrame) mapFrame.src = `https://www.google.com/maps?q=${q}&output=embed`;
+
+  // Quick routes
+  if (fromCatfordWalk) {
+    fromCatfordWalk.href =
+      `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent("Catford Station")}&destination=${q}&travelmode=walking`;
+  }
+  if (fromCatfordBridgeWalk) {
+    fromCatfordBridgeWalk.href =
+      `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent("Catford Bridge Station")}&destination=${q}&travelmode=walking`;
+  }
+  if (fromLewisham) {
+    fromLewisham.href =
+      `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent("Lewisham Station")}&destination=${q}&travelmode=transit`;
+  }
+
+  // ===============================
+  // Premium tabs (Walk / Train / Bus)
+  // ===============================
+  const tabs = document.querySelectorAll(".pv-tab");
+  const panels = {
+    walk: document.getElementById("panel-walk"),
+    train: document.getElementById("panel-train"),
+    bus: document.getElementById("panel-bus"),
+  };
+
+  function setTab(active){
+    tabs.forEach(t => {
+      const isActive = t.dataset.tab === active;
+      t.classList.toggle("active", isActive);
+      t.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
+
+    Object.keys(panels).forEach(k => {
+      if (!panels[k]) return;
+      panels[k].classList.toggle("show", k === active);
+    });
+  }
+
+  tabs.forEach(t => t.addEventListener("click", () => setTab(t.dataset.tab)));
+
+  // ===============================
+  // Copy address + toast
+  // ===============================
+  const copyBtn = document.getElementById("copyAddressBtn");
+  const toast = document.getElementById("pvToast");
+  const toastText = document.getElementById("pvToastText");
+
+  function showToast(msg){
+    if (!toast || !toastText) return;
+    toastText.textContent = msg;
+    toast.classList.add("show");
+    window.clearTimeout(showToast._t);
+    showToast._t = window.setTimeout(() => toast.classList.remove("show"), 1800);
+  }
+
+  if (copyBtn){
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(venueAddress);
+        showToast("Address copied");
+      } catch (e){
+        const temp = document.createElement("textarea");
+        temp.value = venueAddress;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
+        showToast("Address copied");
+      }
+    });
   }
 </script>
 

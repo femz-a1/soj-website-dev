@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Streams of Joy South London</title>
+
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER (reuse your existing header markup if you want) -->
+  <header id="siteHeader" class="site-header solid show">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Streams of Joy South London" class="nav-logo">
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Media</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Give</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="prayer-line.html">Prayer Line</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="page-kicker">CONTACT US</p>
+        <div class="urgent-banner">
+  <strong>Need urgent prayer?</strong>
+  <a href="prayer-line.html">Call our 24hr Prayer Line →</a>
+</div>
+        <h1 class="page-title">We’d love to hear from you</h1>
+        <p class="page-sub">
+          Reach out for questions, prayer, or joining Streams of Joy South London.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-grid">
+      <!-- Contact details -->
+      <div class="contact-card">
+        <h2>Contact Details</h2>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <p class="contact-label">Church Phone</p>
+            <a class="contact-link" href="tel:+447477897976">+44 7477 897976</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <p class="contact-label">Church Email</p>
+            <a class="contact-link" href="mailto:info@sojsouthlondon.org">info@sojsouthlondon.org</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <p class="contact-label">24hr Prayer Line</p>
+            <a class="contact-link" href="prayer-line.html">Go to Prayer Line →</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:info@sojsouthlondon.org">
+            Email Us
+          </a>
+          <a class="btn btn-outline" href="tel:+447477897976">
+            Call Now
+          </a>
+        </div>
+
+        <p class="contact-note">
+          Response time: we aim to reply within 24–48 hours.
+        </p>
+      </div>
+
+      <!-- Contact form -->
+      <div class="contact-card">
+        <h2>Send a Message</h2>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            Full name *
+            <input name="full_name" required placeholder="Your full name">
+          </label>
+
+          <label>
+            Email *
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+
+          <label>
+            Subject
+            <input name="subject" placeholder="What is this about?">
+          </label>
+
+          <label>
+            Message *
+            <textarea name="message" required rows="6" placeholder="Write your message..."></textarea>
+          </label>
+
+          <button class="btn-submit" type="submit">Send Message</button>
+          <p class="msg" id="contactMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Map (optional - keep hidden until venue confirmed) -->
+    <section class="contact-map">
+      <div class="contact-map-inner">
+        <h2>Find Us</h2>
+        <p class="page-sub">Venue details will be confirmed soon.</p>
+
+        <!-- When venue is confirmed, replace src with real embed -->
+        <div class="map-frame">
+          <iframe
+            title="Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=London&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+  </main>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>
