@@ -1,36 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give | Streams of Joy South London</title>
-  
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-   
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Give | Streams of Joy South London</title>
 
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="give.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    
-     <nav class="nav">
-        <div class="logo">Streams of Joy</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="get-involved.html">Get Involved</a></li>
-            <li><a href="give.html">Give</a></li>
-        </ul>
+
+  <header id="siteHeader" class="site-header solid show">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Streams of Joy South London" class="nav-logo">
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Media</a></li>
+        <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
+        <li><a class="nav-link" href="give.html">Give</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="prayer-line.html">Prayer Line</a></li>
+      </ul>
     </nav>
-    
-    <div class="container">
-    
-        <h1>Give</h1>
-        <p>This page will share how to give to our church.</p>
-    
-    </div>
-    
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="give-kicker">GIVE</p>
+        <h1 class="give-title">Support the work</h1>
+        <p class="give-sub">
+          Thank you for your generosity. You can give via bank transfer or PayPal below.
+        </p>
+      </div>
+    </section>
+
+    <section class="give-wrap">
+
+      <div class="give-card">
+        <h2 class="give-card-title">Bank Transfer</h2>
+
+        <div class="give-item">
+          <i class="fa-solid fa-building-columns"></i>
+          <div>
+            <p class="give-label">Bank</p>
+            <p class="give-value" id="bankName">VIRGIN Bank</p>
+          </div>
+        </div>
+
+        <div class="give-item">
+          <i class="fa-solid fa-briefcase"></i>
+          <div>
+            <p class="give-label">Account type</p>
+            <p class="give-value" id="accountType">Business</p>
+          </div>
+        </div>
+
+        <div class="give-item">
+          <i class="fa-solid fa-user"></i>
+          <div>
+            <p class="give-label">Account name</p>
+            <p class="give-value" id="accountName">STREAMS OF JOY SOUTH LONDON LTD</p>
+          </div>
+        </div>
+
+        <div class="give-item">
+          <i class="fa-solid fa-hashtag"></i>
+          <div>
+            <p class="give-label">Sort code</p>
+            <p class="give-value" id="sortCode">82-12-08</p>
+          </div>
+        </div>
+
+        <div class="give-item">
+          <i class="fa-solid fa-id-card"></i>
+          <div>
+            <p class="give-label">Account number</p>
+            <p class="give-value" id="accountNumber">20278981</p>
+          </div>
+        </div>
+
+        <div class="give-actions">
+          <button class="give-btn outline" type="button" id="copyBankBtn">
+            <i class="fa-regular fa-copy"></i> Copy bank details
+          </button>
+        </div>
+
+        <p class="give-note">
+          If you’d like, add a reference (e.g. Offering, Tithe, Seed) so it’s easy to track.
+        </p>
+      </div>
+
+      <div class="give-card">
+        <h2 class="give-card-title">PayPal</h2>
+
+        <div class="give-item">
+          <i class="fa-brands fa-paypal"></i>
+          <div>
+            <p class="give-label">PayPal link</p>
+            <p class="give-value">paypal.me/SOJSouthLondon</p>
+          </div>
+        </div>
+
+        <div class="give-actions">
+          <a class="give-btn primary" href="https://paypal.me/SOJSouthLondon" target="_blank" rel="noopener">
+            <i class="fa-brands fa-paypal"></i> Give via PayPal
+          </a>
+          <button class="give-btn outline" type="button" id="copyPaypalBtn">
+            <i class="fa-regular fa-copy"></i> Copy PayPal link
+          </button>
+        </div>
+
+        <p class="give-note">
+          Quick and secure. Thank you for supporting Streams of Joy South London.
+        </p>
+      </div>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+  </main>
+
+  <div class="give-toast" id="giveToast" role="status" aria-live="polite">
+    <i class="fa-solid fa-check"></i>
+    <span id="giveToastText">Copied</span>
+  </div>
+
+  <script src="JS/main.js"></script>
+  <script src="JS/give.js"></script>
 </body>
 </html>
