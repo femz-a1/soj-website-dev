@@ -652,13 +652,22 @@ p{
    COUNTDOWN SECTION
    ========================= */
 .countdown{
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.countdown-shell{
+  max-width: 980px;
+  margin: 0 auto;
   background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.16), transparent 60%),
               linear-gradient(to bottom, #071423, #0b1f35);
-              min-height: 100vh;
+  border-radius: 28px;
+  padding: 48px 28px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.14);
 }
 
 .countdown-wrap{
-  max-width: 1100px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
@@ -667,18 +676,18 @@ p{
   letter-spacing: 0.22em;
   font-size: 14px;
   font-weight: 800;
-  color: #777;
+  color: rgba(255,255,255,0.65);
   margin-bottom: 14px;
 }
 
 .countdown-title{
   margin: 0 0 10px;
-  color: #111;
+  color: #fff;
 }
 
 .countdown-sub{
   margin: 0 auto 26px;
-  color: #333;
+  color: rgba(255,255,255,0.82);
   max-width: 65ch;
 }
 
@@ -728,17 +737,19 @@ p{
 .countdown-note{
   margin-top: 14px;
   font-size: 14px;
-  color: #666;
+  color: rgba(255,255,255,0.55);
 }
 
-
-/* Mobile */
 @media (max-width: 760px){
   .countdown-grid{
     grid-template-columns: repeat(2, minmax(140px, 1fr));
   }
-}
 
+  .countdown-shell{
+    padding: 36px 18px;
+    border-radius: 22px;
+  }
+}
 
 /* =========================================================
    10) LEAD PASTOR (FULL WIDTH BANNER)
