@@ -353,6 +353,16 @@ p{
 }
 .btn-outline-dark:hover{ border-color: #bbb; }
 
+.sermon-actions .btn-outline{
+  border: 1px solid #ddd;
+  color: #111;
+  background: transparent;
+}
+
+.sermon-actions .btn-outline:hover{
+  border-color: #bbb;
+}
+
 
 /* =========================================================
    8) HERO (FULL WIDTH)
@@ -645,7 +655,6 @@ p{
   background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.16), transparent 60%),
               linear-gradient(to bottom, #071423, #0b1f35);
               min-height: 100vh;
-              
 }
 
 .countdown-wrap{
@@ -2584,15 +2593,14 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 
 /* ===== CONTACT PAGE TEXT FIX ===== */
 
+/* ===== CONTACT PAGE TEXT FIX ===== */
 .contact-card,
 .contact-card h2,
 .contact-label,
 .contact-link,
 .contact-form label,
 .contact-form input,
-.contact-form textarea,
-.page-title,
-.page-sub {
+.contact-form textarea {
   color: #111 !important;
 }
 
@@ -2610,28 +2618,27 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 
 /* =========================================================
    NEW PAGES: ABOUT / EVENTS / GET INVOLVED
-   ADD THIS AT THE BOTTOM OF YOUR CURRENT CSS
+   CLEAN FINAL VERSION
    ========================================================= */
 
-/* Shared page hero for new full pages */
+/* Hero for About / Events / Get Involved */
 .page-hero.page-hero--full{
   position: relative;
   min-height: 72vh;
   display: flex;
   align-items: center;
   padding: 120px 20px 80px;
+  margin-top: 86px;
   background:
     radial-gradient(circle at top right, rgba(201,162,77,0.12), transparent 30%),
     linear-gradient(rgba(5,10,18,0.45), rgba(5,10,18,0.72)),
-    url("assets/images/hero-placeholder.jpg") center/cover no-repeat;
+    url("assets/images/hero.jpg") center/cover no-repeat;
   overflow: hidden;
 }
 
 .page-hero--full .page-hero-inner{
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
   text-align: center;
 }
 
@@ -2645,9 +2652,9 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 }
 
 .page-hero--full .page-title{
-  color: #fff;
+  color: #ffffff;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.02;
+  line-height: 1.05;
   margin-bottom: 14px;
 }
 
@@ -2655,7 +2662,7 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   color: rgba(255,255,255,0.88);
   max-width: 760px;
   margin: 0 auto;
-  font-size: 1.04rem;
+  font-size: 1.05rem;
 }
 
 .page-hero--full .hero-actions{
@@ -2663,17 +2670,11 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   margin-top: 28px;
 }
 
-/* Section heading */
+/* Section headings */
 .section-head{
   max-width: 760px;
   margin: 0 auto 34px;
   text-align: center;
-}
-
-.section-head--left{
-  max-width: 700px;
-  margin: 0 0 28px;
-  text-align: left;
 }
 
 .section-head .section-kicker{
@@ -2681,35 +2682,30 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   margin-bottom: 12px;
 }
 
-.section-head h2,
-.section-head--left h2{
+.section-head h2{
   margin-bottom: 12px;
   color: #111;
 }
 
-.section-head p,
-.section-head--left p{
+.section-head p{
   color: #333;
-  margin: 0 auto;
-}
-
-.section-dark .section-head h2,
-.section-dark .section-head p,
-.section-dark .section-head .section-kicker,
-.section-dark .section-head--left h2,
-.section-dark .section-head--left p,
-.section-dark .section-head--left .section-kicker{
-  color: #fff;
 }
 
 /* Dark section helper */
 .section-dark{
-  background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.16), transparent 60%),
-              linear-gradient(to bottom, #071423, #0b1f35);
-  color: #fff;
+  background:
+  radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.16), transparent 60%),
+  linear-gradient(to bottom, #071423, #0b1f35);
+  color: #ffffff;
 }
 
-/* Two-column layout */
+.section-dark .section-head h2,
+.section-dark .section-head p,
+.section-dark .section-head .section-kicker{
+  color: #ffffff;
+}
+
+/* Two column split layout */
 .split{
   max-width: 1100px;
   margin: 0 auto;
@@ -2720,10 +2716,6 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   align-items: center;
 }
 
-.split.reverse{
-  grid-template-columns: 0.95fr 1.05fr;
-}
-
 .split-text h2{
   margin-bottom: 14px;
 }
@@ -2732,19 +2724,14 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   color: inherit;
 }
 
-.section--white .split-text h2,
-.section--white .split-text p{
-  color: #111;
-}
-
-/* Placeholder image box */
+/* Image placeholder */
 .image-placeholder{
   min-height: 360px;
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.12);
   background:
-    linear-gradient(135deg, rgba(201,162,77,0.12), rgba(255,255,255,0.04)),
-    rgba(255,255,255,0.06);
+  linear-gradient(135deg, rgba(201,162,77,0.12), rgba(255,255,255,0.04)),
+  rgba(255,255,255,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2756,8 +2743,8 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .section--white .image-placeholder{
   border: 1px solid #e8e8e8;
   background:
-    linear-gradient(135deg, rgba(201,162,77,0.12), rgba(255,255,255,1)),
-    #fafafa;
+  linear-gradient(135deg, rgba(201,162,77,0.12), rgba(255,255,255,1)),
+  #fafafa;
 }
 
 .image-placeholder span{
@@ -2769,7 +2756,7 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   color: #666;
 }
 
-/* Card grids */
+/* Grid layouts */
 .info-grid{
   max-width: 1100px;
   margin: 0 auto;
@@ -2786,8 +2773,9 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Cards */
 .info-card{
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #ececec;
   border-top: 4px solid var(--gold);
   border-radius: 18px;
@@ -2802,7 +2790,6 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 
 .info-card p{
   color: #333;
-  margin-bottom: 0;
 }
 
 .info-card i{
@@ -2823,57 +2810,6 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .section-dark .info-card h3,
 .section-dark .info-card p{
   color: #fff;
-}
-
-/* Event feature card */
-.feature-card{
-  background: #fff;
-  border: 1px solid #ececec;
-  border-top: 4px solid var(--gold);
-  border-radius: 22px;
-  padding: 30px 26px;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.08);
-}
-
-.feature-card h2{
-  margin-bottom: 14px;
-  color: #111;
-}
-
-.feature-card p{
-  color: #333;
-}
-
-.event-meta{
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.event-meta strong{
-  color: #111;
-}
-
-.event-badge{
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: rgba(201,162,77,0.14);
-  color: #8c6a20;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* Quote */
-.quote-line{
-  margin-top: 24px;
-  padding-left: 16px;
-  border-left: 3px solid var(--gold);
-  color: var(--gold);
-  font-weight: 800;
-  font-style: italic;
 }
 
 /* CTA block */
@@ -2903,23 +2839,59 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   margin-right: auto;
 }
 
-/* Small text links */
-.text-link{
-  display: inline-block;
-  margin-top: 12px;
+/* Quote line */
+.quote-line{
+  margin-top: 24px;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
   color: var(--gold);
-  text-decoration: none;
   font-weight: 800;
+  font-style: italic;
 }
 
-.text-link:hover{
-  text-decoration: underline;
+/* Event feature card */
+.feature-card{
+  background: #fff;
+  border: 1px solid #ececec;
+  border-top: 4px solid var(--gold);
+  border-radius: 22px;
+  padding: 30px 26px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.08);
+}
+
+.event-badge{
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(201,162,77,0.14);
+  color: #8c6a20;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Buttons in white sections */
+.section--white .btn-outline{
+  border: 1px solid #ddd;
+  color: #111;
+  background: transparent;
+}
+
+.section--white .btn-outline:hover{
+  border-color: #bbb;
+}
+
+/* Even department card heights */
+#teams .info-card{
+  min-height: 220px;
 }
 
 /* Mobile */
 @media (max-width: 900px){
-  .split,
-  .split.reverse{
+
+  .split{
     grid-template-columns: 1fr;
     gap: 26px;
   }
@@ -2940,8 +2912,8 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
     min-height: 62vh;
     padding: 110px 20px 70px;
   }
-}
 
+}
 /* =========================================================
    EVENTS PAGE - FLYER GRID
    ========================================================= */

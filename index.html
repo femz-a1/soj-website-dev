@@ -100,107 +100,42 @@
   </div>
 
   <section class="countdown reveal" id="countdown">
-    <body class="comingsoon-page">
-    <!-- Coming Soon Hero -->
-     <main class="cs-hero">
-      <div class="cs-card">
-      <p class="cs-kicker">WE ARE LAUNCHING SOON</p>
+  <div class="countdown-wrap">
+    <p class="countdown-kicker">LAUNCH COUNTDOWN</p>
+    <h2 class="countdown-title">First Service</h2>
+    <p class="countdown-sub">
+      We can’t wait to welcome you. Join us on <strong>Sunday, 22 March 2026 at 10:00 AM</strong>.
+    </p>
 
-      <h1 class="cs-title">
-        Streams of Joy<br>
-        <span>South London</span>
-      </h1>
-
-      <p class="cs-sub">
-        Our First service is coming.
-        Join us as we prepare to raise lives and build faith in South London.
-      </p>
-
-      <!-- Countdown -->
-      <div class="cs-countdown" role="timer" aria-live="polite">
-        <div class="cs-time">
-          <span class="cs-num" id="d">--</span>
-          <span class="cs-label">Days</span>
-        </div>
-        <div class="cs-time">
-          <span class="cs-num" id="h">--</span>
-          <span class="cs-label">Hours</span>
-        </div>
-        <div class="cs-time">
-          <span class="cs-num" id="m">--</span>
-          <span class="cs-label">Minutes</span>
-        </div>
-        <div class="cs-time">
-          <span class="cs-num" id="s">--</span>
-          <span class="cs-label">Seconds</span>
-        </div>
+    <div class="countdown-grid" aria-label="Countdown timer">
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdDays">--</span>
+        <span class="countdown-label">Days</span>
       </div>
-
-      <p class="cs-date">
-        Launch date: <strong>Sunday, 22 March 2026</strong>
-      </p>
-
-      <!-- Actions -->
-      <div class="cs-actions">
-        <a class="btn btn-primary" href="visit.html">Plan Your Visit</a>
-        <a class="btn btn-outline" href="index.html#findus">Get Directions</a>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdHours">--</span>
+        <span class="countdown-label">Hours</span>
       </div>
-
-      <!-- Optional email capture -->
-      <form class="cs-form" action="#" method="post">
-        <input type="email" name="email" placeholder="Get launch updates (email)" required>
-        <button type="submit">Notify Me</button>
-      </form>
-
-      <p class="cs-mini">
-        We’ll only send important updates. Unsubscribe anytime.
-      </p>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdMins">--</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-box">
+        <span class="countdown-num" id="cdSecs">--</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
     </div>
-  </main>
-  <script>
-    // Countdown to March 22, 2026 (UK time safe-ish using local time)
-    // If you want a specific time (e.g. 10:00), set: "2026-03-22T10:00:00"
-    const target = new Date("2026-03-22T10:00:00");
 
-    const elD = document.getElementById("d");
-    const elH = document.getElementById("h");
-    const elM = document.getElementById("m");
-    const elS = document.getElementById("s");
+    <div class="countdown-actions">
+      <a class="btn btn-primary" href="visit.html">Plan Your Visit</a>
+      <a class="btn btn-outline" href="#findus">Get Directions</a>
+    </div>
 
-    function pad(n){ return String(n).padStart(2, "0"); }
-
-    function tick(){
-      const now = new Date();
-      let diff = target - now;
-
-      if (diff <= 0){
-        elD.textContent = "00";
-        elH.textContent = "00";
-        elM.textContent = "00";
-        elS.textContent = "00";
-        return;
-      }
-
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / (60 * 60 * 24));
-      const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
-      const mins = Math.floor((totalSeconds % (60 * 60)) / 60);
-      const secs = totalSeconds % 60;
-
-      elD.textContent = pad(days);
-      elH.textContent = pad(hours);
-      elM.textContent = pad(mins);
-      elS.textContent = pad(secs);
-    }
-
-    tick();
-    setInterval(tick, 1000);
-  </script>
+    <p class="countdown-note" id="countdownNote"></p>
+  </div>
 </section>
 
-
-
-
+  
     <section class="home-pastor reveal" aria-label="Lead Pastor">
     <div class="pastor-bg" id="pastorBanner">
 
@@ -530,6 +465,55 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+  const launchTarget = new Date("2026-03-22T10:00:00");
+
+  const cdDays = document.getElementById("cdDays");
+  const cdHours = document.getElementById("cdHours");
+  const cdMins = document.getElementById("cdMins");
+  const cdSecs = document.getElementById("cdSecs");
+  const countdownNote = document.getElementById("countdownNote");
+
+  function formatNumber(num) {
+    return String(num).padStart(2, "0");
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = launchTarget - now;
+
+    if (diff <= 0) {
+      cdDays.textContent = "00";
+      cdHours.textContent = "00";
+      cdMins.textContent = "00";
+      cdSecs.textContent = "00";
+
+      if (countdownNote) {
+        countdownNote.textContent = "We’re live. Join us this Sunday at 10:00 AM.";
+      }
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / (60 * 60 * 24));
+    const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+    const seconds = totalSeconds % 60;
+
+    cdDays.textContent = formatNumber(days);
+    cdHours.textContent = formatNumber(hours);
+    cdMins.textContent = formatNumber(minutes);
+    cdSecs.textContent = formatNumber(seconds);
+
+    if (countdownNote) {
+      countdownNote.textContent = "Launch Sunday — 22 March 2026 at 10:00 AM";
+    }
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 <script src="JS/main.js"></script>
 </body>
