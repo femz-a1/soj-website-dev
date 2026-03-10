@@ -471,4 +471,21 @@ document.addEventListener("DOMContentLoaded", () => {
   .catch(err => console.error("Footer failed to load:", err));
 });
 
+const togglePhreddyStory = document.getElementById("togglePhreddyStory");
+const phreddyFullStory = document.getElementById("phreddyFullStory");
+
+if (togglePhreddyStory && phreddyFullStory) {
+  togglePhreddyStory.addEventListener("click", () => {
+    const isHidden = phreddyFullStory.hasAttribute("hidden");
+
+    if (isHidden) {
+      phreddyFullStory.removeAttribute("hidden");
+      togglePhreddyStory.textContent = "Hide Full Story";
+    } else {
+      phreddyFullStory.setAttribute("hidden", "");
+      togglePhreddyStory.textContent = "Read Full Story";
+    }
+  });
+}
+
 
