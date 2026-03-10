@@ -2210,6 +2210,30 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
               linear-gradient(to bottom, #071423, #0b1f35);
   min-height: 100vh;
 }
+.comingsoon-page{
+  min-height: 100vh;
+
+  background:
+    radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.16), transparent 60%),
+    linear-gradient(to bottom, #071423, #0b1f35);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Coming Soon hero section */
+
+.cs-hero{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+}
 
 /* Top bar */
 .cs-topbar{
