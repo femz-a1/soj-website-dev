@@ -88,7 +88,7 @@
       
       <div class="who-actions">
         <a class="btn btn-primary" href="about.html">Learn more</a>
-         <button class="btn btn-outline" data-open-join="volunteer">
+         <button class="btn btn-outline " data-open-join="volunteer">
               Join the Launch List / Volunteer
             </button>
           </div>
@@ -129,7 +129,7 @@
 
       <div class="countdown-actions">
         <a class="btn btn-primary" href="visit.html">Plan Your Visit</a>
-        <a class="btn btn-outline-dark" href="#findus">Get Directions</a>
+        <a class="btn btn-outline-light" href="#findus">Get Directions</a>
       </div>
 
       <p class="countdown-note" id="countdownNote"></p>
@@ -204,7 +204,7 @@
 
 
       <div class="lp-actions">
-        <a class="btn btn-secondary" href="coming-soon.html">Read full bio</a>
+        <a class="btn btn-secondary" href="about.html#pastor-phreddy-bio">Read full bio</a>
         <!-- If you want modal to open, add this button (see section 3) -->
       </div>
 
@@ -467,51 +467,6 @@
 </div>
 
 <div id="footer-placeholder"></div>
-
-<script>
-  const launchTarget = new Date("2026-03-22T10:00:00");
-
-  const cdDays = document.getElementById("cdDays");
-  const cdHours = document.getElementById("cdHours");
-  const cdMins = document.getElementById("cdMins");
-  const cdSecs = document.getElementById("cdSecs");
-  const countdownNote = document.getElementById("countdownNote");
-
-  function formatNumber(num) {
-    return String(num).padStart(2, "0");
-  }
-
-  function updateCountdown() {
-    const now = new Date();
-    const diff = launchTarget - now;
-
-    if (diff <= 0) {
-      cdDays.textContent = "00";
-      cdHours.textContent = "00";
-      cdMins.textContent = "00";
-      cdSecs.textContent = "00";
-
-      if (countdownNote) {
-        countdownNote.textContent = "We’re live. Join us this Sunday at 10:00 AM.";
-      }
-      return;
-    }
-
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / (60 * 60 * 24));
-    const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
-    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
-    const seconds = totalSeconds % 60;
-
-    cdDays.textContent = formatNumber(days);
-    cdHours.textContent = formatNumber(hours);
-    cdMins.textContent = formatNumber(minutes);
-    cdSecs.textContent = formatNumber(seconds);
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 
 <script src="JS/main.js"></script>
 </body>

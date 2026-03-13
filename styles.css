@@ -14,6 +14,7 @@
 
 html{
   font-size: 18px; /* base font size for rem units */
+  scroll-behavior:smooth;
 }
 
 html, body{
@@ -346,12 +347,25 @@ p{
 }
 .btn-outline:hover{ border-color: #fff; }
 
+.btn-outline-light{
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.75);
+  color: #fff;
+}
+
+.btn-outline-light:hover{
+  border-color:#fff;
+}
+
 .btn-outline-dark{
   background: transparent;
-  border: 1px solid #ddd;
+  border: 2px solid #111;
   color: #111;
 }
-.btn-outline-dark:hover{ border-color: #bbb; }
+
+.btn-outline-dark:hover{
+  border-color:#000;
+}
 
 .sermon-actions .btn-outline{
   border: 1px solid #ddd;
@@ -2619,6 +2633,20 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   color: rgba(255,255,255,0.60);
   font-size: 13px;
   line-height: 1.6;
+}
+
+/* Prayer Line page text fixes */
+
+.prayer-hero .page-kicker{
+  color:#555;
+}
+
+.prayer-hero .page-sub{
+  color:#333;
+}
+
+.prayer-note{
+  color:#555;
 }
 
 @media (max-width: 900px){
