@@ -2672,6 +2672,13 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
   overflow: hidden;
 }
 
+.hero-get-involved{
+  background:
+    radial-gradient(circle at top right, rgba(201,162,77,0.12), transparent 30%),
+    linear-gradient(rgba(5,10,18,0.45), rgba(5,10,18,0.72)),
+    url("assets/images/get-involved.jpg") center/cover no-repeat;
+}
+
 .page-hero--full .page-hero-inner{
   max-width: 900px;
   margin: 0 auto;
