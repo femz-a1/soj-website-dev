@@ -1945,14 +1945,13 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 .site-footer{
   background: #0b0b0c;
   color: #ffffff;
-  padding: 0 20px 24px; /* ✅ remove top padding */
+  padding: 0 0 24px; /* ✅ remove top padding */
   border-top: 1px solid rgba(255,255,255,0.08);
   max-width: none;
 }
 
 .footer-wrap{
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: grid;
   grid-template-columns: 1.3fr 1fr 1.1fr 1.2fr;
   gap: 38px;
@@ -2146,6 +2145,9 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 
 /* ===== FOLLOW BAR (Footer social callout) ===== */
 .follow-bar{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   background: var(--gold);
@@ -2153,9 +2155,8 @@ background: radial-gradient(900px 420px at 50% 0%, rgba(77,163,255,0.18), transp
 }
 
 .follow-bar-inner{
-  max-width: 1200px; /* match your site width if you have one */
-  margin: 0 auto;
-  padding: 22px 18px;
+  width: 100%;
+  padding: 22px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
