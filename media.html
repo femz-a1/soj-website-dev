@@ -1,45 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media | Streams of Joy South London</title>
-  
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-   
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Media | Streams of Joy South London</title>
+
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    
-<header id="siteHeader" class="site-header solid show">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <img src="assets/images/logo.png" alt="Streams of Joy South London" class="nav-logo">
-    </a>
 
-    <ul class="nav-links">
-      <li><a class="nav-link" href="index.html">Home</a></li>
-      <li><a class="nav-link" href="about.html">About</a></li>
-      <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
-      <li><a class="nav-link" href="events.html">Events</a></li>
-      <li><a class="nav-link" href="coming-soon.html">Media</a></li>
-      <li><a class="nav-link" href="coming-soon.html">Get Involved</a></li>
-      <li><a class="nav-link" href="give.html">Give</a></li>
-      <li><a class="nav-link" href="contact.html">Contact</a></li>
-      <li><a class="nav-link" href="prayer-line.html">Prayer Line</a></li>
-    </ul>
-  </nav>
-</header>
-    
-    <div class="container">
-    
-        <h1>Media</h1>
-        <p>This page will share our sermons and other media content.</p>
-    
+<body>
+
+  <header id="siteHeader" class="site-header solid show">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Streams of Joy South London" class="nav-logo">
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="visit.html">Plan Your Visit</a></li>
+        <li><a class="nav-link active" href="media.html">Media</a></li>
+        <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
+        <li><a class="nav-link" href="give.html">Give</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link" href="prayer-line.html">Prayer Line</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="media-page">
+
+    <!-- HERO -->
+    <section class="media-hero">
+      <div class="media-hero-bg"></div>
+      <div class="media-hero-overlay"></div>
+
+      <div class="media-hero-inner">
+        <p class="media-kicker">MEDIA</p>
+        <h1 class="media-title">Moments, worship, prayer, and the life of the house.</h1>
+        <p class="media-sub">
+          A look back at our first service in South London — a day marked by worship, joy,
+          prayer, fellowship, and the presence of God.
+        </p>
+
+        <div class="media-hero-actions">
+          <a href="#first-service-gallery" class="btn btn-primary">View Gallery</a>
+          <a href="#phreddy-feature" class="btn btn-outline-light">Featured Moment</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="media-intro section section--white">
+      <div class="media-shell">
+        <div class="media-intro-grid">
+          <div class="media-intro-copy">
+            <p class="section-kicker">FIRST SERVICE</p>
+            <h2>22 March 2026</h2>
+            <p>
+              Our first service marked a powerful beginning for Streams of Joy South London.
+              This page captures a few of the moments from that day at the gathering,
+              the worship, the Word, the prayer, and the people.
+            </p>
+            <p>
+              As more services take place, this media page can continue to grow as an archive
+              of what God is doing in the house.
+            </p>
+          </div>
+
+          <div class="media-intro-card">
+            <p class="media-intro-label">Featured Album</p>
+            <h3>Launch Service Gallery</h3>
+            <p>
+              A visual archive from the inaugural service built to expand over time
+              as new services and moments are added.
+            </p>
+
+            <div class="media-intro-meta">
+              <span><i class="fa-regular fa-calendar"></i> 22 March 2026</span>
+              <span><i class="fa-regular fa-image"></i> First Service Photos</span>
+              <span><i class="fa-solid fa-location-dot"></i> Catford, South London</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASTOR FEATURE -->
+    <section class="media-phreddy-feature section section-dark" id="phreddy-feature">
+      <div class="media-shell">
+        <div class="media-phreddy-grid">
+          <div class="media-phreddy-image-wrap">
+            <div class="media-phreddy-image-card">
+              <img src="assets/images/media/first-service/image00022.jpeg" alt="Pastor Phreddy ministering during the first service">
+            </div>
+          </div>
+
+          <div class="media-phreddy-copy">
+            <p class="section-kicker">FEATURED MOMENT</p>
+            <h2>Pastor Phreddy at the first service</h2>
+            <p>
+              One of the defining moments from the day was the ministry of Pastor Phreddy
+              as the house stepped into a new chapter in South London.
+            </p>
+
+            <blockquote class="media-phreddy-quote">
+              A house of prayer, faith, worship, and transformed lives.
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <!-- GALLERY 1 -->
+<section class="media-gallery-section section section--white" id="first-service-gallery">
+  <div class="media-shell">
+    <div class="media-gallery-head">
+      <p class="section-kicker">PHOTO GALLERY</p>
+      <h2>Launch Service Archive</h2>
+      <p>Tap any image to view it larger.</p>
     </div>
-    
+
+    <div class="media-gallery-grid" id="mediaGallery"></div>
+
+    <div class="media-loadmore-wrap">
+      <button class="media-loadmore-btn" id="mediaGalleryBtn" type="button">
+        Load More Photos
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SECOND SERVICE EXAMPLE - can be duplicated for future services
+<section class="media-gallery-section section section--white">
+  <div class="media-shell">
+    <div class="media-gallery-head">
+      <p class="section-kicker">PHOTO GALLERY</p>
+      <h2>Service – 29 March 2026</h2>
+      <p>More moments from the house.</p>
+    </div>
+
+    <div class="media-gallery-grid" id="mediaGallery2"></div>
+
+    <div class="media-loadmore-wrap">
+      <button class="media-loadmore-btn" id="mediaGalleryBtn2" type="button">
+        Load More Photos
+      </button>
+    </div>
+  </div>
+</section> -->
+
+    <div id="footer-placeholder"></div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="media-lightbox" id="mediaLightbox" aria-hidden="true">
+    <button class="media-lightbox-close" id="mediaLightboxClose" aria-label="Close image">✕</button>
+    <button class="media-lightbox-nav prev" id="mediaPrev" aria-label="Previous image">‹</button>
+    <img class="media-lightbox-img" id="mediaLightboxImg" alt="Expanded gallery image">
+    <button class="media-lightbox-nav next" id="mediaNext" aria-label="Next image">›</button>
+  </div>
+
+    <script>
+  const galleryConfigs = [
+    {
+      gridId: "mediaGallery",
+      buttonId: "mediaGalleryBtn",
+      folder: "assets/images/media/first-service",
+      total: 56,
+      extension: "jpeg",
+      batchSize: 12,
+      altPrefix: "Streams of Joy South London first service photo"
+    },
+    {
+      gridId: "mediaGallery2",
+      buttonId: "mediaGalleryBtn2",
+      folder: "assets/images/media/first-service",
+      total: 40,
+      extension: "jpg",
+      batchSize: 12,
+      altPrefix: "Streams of Joy South London second service photo"
+    }
+  ];
+
+  const mediaLightbox = document.getElementById("mediaLightbox");
+  const mediaLightboxImg = document.getElementById("mediaLightboxImg");
+  const mediaLightboxClose = document.getElementById("mediaLightboxClose");
+  const mediaPrev = document.getElementById("mediaPrev");
+  const mediaNext = document.getElementById("mediaNext");
+
+  const allGalleryImages = [];
+  let currentIndex = 0;
+
+  function padImageNumber(num) {
+    return String(num).padStart(5, "0");
+  }
+
+  function openLightbox(index) {
+    currentIndex = index;
+    mediaLightboxImg.src = allGalleryImages[currentIndex].src;
+    mediaLightboxImg.alt = allGalleryImages[currentIndex].alt;
+    mediaLightbox.classList.add("show");
+    mediaLightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+  }
+
+  function closeLightbox() {
+    mediaLightbox.classList.remove("show");
+    mediaLightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % allGalleryImages.length;
+    mediaLightboxImg.src = allGalleryImages[currentIndex].src;
+    mediaLightboxImg.alt = allGalleryImages[currentIndex].alt;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + allGalleryImages.length) % allGalleryImages.length;
+    mediaLightboxImg.src = allGalleryImages[currentIndex].src;
+    mediaLightboxImg.alt = allGalleryImages[currentIndex].alt;
+  }
+
+  function createGalleryImage(config, imageNumber) {
+    const fileNum = padImageNumber(imageNumber);
+    const imgSrc = `${config.folder}/image${fileNum}.${config.extension}`;
+
+    const item = document.createElement("button");
+    item.className = "media-gallery-item";
+    item.type = "button";
+    item.setAttribute("aria-label", `Open photo ${imageNumber}`);
+
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    img.alt = `${config.altPrefix} ${imageNumber}`;
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    item.appendChild(img);
+
+    const globalIndex = allGalleryImages.length;
+    allGalleryImages.push(img);
+
+    item.addEventListener("click", () => openLightbox(globalIndex));
+
+    return item;
+  }
+
+  function setupGallery(config) {
+    const grid = document.getElementById(config.gridId);
+    const button = document.getElementById(config.buttonId);
+
+    if (!grid || !button) return;
+
+    let loadedCount = 0;
+
+    function loadBatch() {
+      const fragment = document.createDocumentFragment();
+      const nextLimit = Math.min(loadedCount + config.batchSize, config.total);
+
+      for (let i = loadedCount + 1; i <= nextLimit; i++) {
+        fragment.appendChild(createGalleryImage(config, i));
+      }
+
+      grid.appendChild(fragment);
+      loadedCount = nextLimit;
+
+      if (loadedCount >= config.total) {
+        button.style.display = "none";
+      }
+    }
+
+    loadBatch();
+    button.addEventListener("click", loadBatch);
+  }
+
+  galleryConfigs.forEach(setupGallery);
+
+  mediaLightboxClose.addEventListener("click", closeLightbox);
+  mediaNext.addEventListener("click", showNext);
+  mediaPrev.addEventListener("click", showPrev);
+
+  mediaLightbox.addEventListener("click", (e) => {
+    if (e.target === mediaLightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!mediaLightbox.classList.contains("show")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+</script>
+
+  <script src="JS/main.js"></script>
 </body>
 </html>

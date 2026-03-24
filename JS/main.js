@@ -244,53 +244,7 @@ if (header && burger){
     obs.observe(lpSection);
   }
 
-  // =========================================================
-  // COUNTDOWN: Inaugural Service (22 March 2026 10:00)
-  // =========================================================
-  (function countdownInit(){
-    const dEl = document.getElementById("cdDays");
-    const hEl = document.getElementById("cdHours");
-    const mEl = document.getElementById("cdMins");
-    const sEl = document.getElementById("cdSecs");
-    const noteEl = document.getElementById("countdownNote");
-
-    if (!dEl || !hEl || !mEl || !sEl) return;
-
-    const target = new Date(2026, 2, 22, 10, 0, 0);
-
-    function pad(n){ return String(n).padStart(2, "0"); }
-
-    function tick(){
-      const now = new Date();
-      const diff = target - now;
-
-      if (diff <= 0){
-        dEl.textContent = "0";
-        hEl.textContent = "00";
-        mEl.textContent = "00";
-        sEl.textContent = "00";
-        if (noteEl) noteEl.textContent = "We’re live! See you at the inaugural service 🎉";
-        return;
-      }
-
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / (3600 * 24));
-      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-      const mins = Math.floor((totalSeconds % 3600) / 60);
-      const secs = totalSeconds % 60;
-
-      dEl.textContent = String(days);
-      hEl.textContent = pad(hours);
-      mEl.textContent = pad(mins);
-      sEl.textContent = pad(secs);
-
-      if (noteEl) noteEl.textContent = `Counting down to Sunday, 22 March 2026.`;
-    }
-
-    tick();
-    setInterval(tick, 1000);
-  })();
-
+ 
 
   // =========================================================
   // JOIN MODAL + FORM SUBMIT
